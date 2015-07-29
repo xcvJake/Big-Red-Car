@@ -24,6 +24,7 @@ void setup()
   pinMode(8, OUTPUT);
   pinMode(9, OUTPUT);
   //PWM Mosfet
+  TCCR0B = TCCR0B & 0b11111000 | 0x02;
   pinMode(pwmMOSFET, OUTPUT);
   
   //Limit Switches
